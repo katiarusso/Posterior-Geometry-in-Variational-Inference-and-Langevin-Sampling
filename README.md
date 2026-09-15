@@ -17,16 +17,27 @@ discretization changes the invariant covariance.
 For a correlated Gaussian target
 
 $$
-\pi_\rho = \mathcal N\!\left(0,
-\begin{bmatrix}1&\rho\\\rho&1\end{bmatrix}\right),
+\pi_{\rho} =
+\mathcal{N}\left(
+\mathbf{0},
+\begin{bmatrix}
+1 & \rho \\
+\rho & 1
+\end{bmatrix}
+\right).
 $$
 
 the forward-KL optimal Gaussian mean-field approximation is
 
 $$
-q_\rho^* = \mathcal N\!\left(0,(1-\rho^2)I_2\right),
+q_{\rho}^{* } =
+\mathcal{N}\left(
+\mathbf{0},
+(1-\rho^{2})I_{2}
+\right),
 \qquad
-\mathrm{KL}(q_\rho^*\|\pi_\rho)=-\tfrac12\log(1-\rho^2).
+\mathrm{KL}\left(q_{\rho}^{*}\,\|\,\pi_{\rho}\right) =
+-\frac{1}{2}\log(1-\rho^{2}).
 $$
 
 As correlation approaches one, mean-field uncertainty collapses while ULA's
@@ -48,7 +59,16 @@ ULA stationary bias, directional autocorrelation and effective sample size.
 
 The second experiment embeds the same geometry in conjugate Bayesian linear
 regression. A deterministic design gives
-$X^\top X=n\left[\begin{smallmatrix}1&\rho_X\\\rho_X&1\end{smallmatrix}\right]$,
+
+$$
+X^{\top}X =
+n
+\begin{bmatrix}
+1 & \rho_X \\
+\rho_X & 1
+\end{bmatrix},
+$$
+
 allowing collinearity and prior regularization to be varied independently.
 It shows how mean-field VI underestimates coefficient uncertainty and how the
 same weakly identified direction slows ULA.
