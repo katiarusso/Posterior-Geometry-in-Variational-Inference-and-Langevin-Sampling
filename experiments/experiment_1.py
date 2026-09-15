@@ -4,10 +4,10 @@ Bivariate Gaussian target.
 
 Purpose
 -------
-Reproduce the figures and diagnostic tables for Section 3.2 of the thesis
+Reproduce the figures and diagnostic tables for Section 3.2 of the project
 in a self-contained script. The original analysis was developed in
 Experiment1.ipynb; this script extracts only what is needed for the figures
-that appear in the thesis, with a consistent visual style shared with the
+that appear in the project report, with a consistent visual style shared with the
 Experiment 2 (second version) script (2x2 contour grid, no matplotlib
 figure-level titles, identical typographic conventions).
 
@@ -146,7 +146,7 @@ def autocorrelation_1d(x: np.ndarray, max_lag: int) -> np.ndarray:
 def ess_until_first_nonpositive(acf: np.ndarray, sample_size: int) -> float:
     """ESS estimate truncating at the first non-positive autocorrelation.
 
-    This is the estimator used in the thesis output. It is intentionally named
+    This is the estimator used in the original project output. It is intentionally named
     precisely: unlike Geyer's IPS estimator, it does not group autocovariances
     into adjacent pairs.
     """
