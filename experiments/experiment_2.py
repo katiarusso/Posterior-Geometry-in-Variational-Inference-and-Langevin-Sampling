@@ -4,7 +4,7 @@ Bayesian linear regression with collinearity and prior regularization.
 
 Purpose
 -------
-This script supports Section 3.3 of the thesis.
+This script supports Section 3.3 of the exploratory project.
 It is not meant to reproduce the bivariate Gaussian toy experiment inside a
 regression model. Instead, it shows how posterior geometry arises naturally
 from a Bayesian linear regression model with collinear predictors, and how the
@@ -37,7 +37,7 @@ identification of individual coefficients through large marginal variance and
 strong negative posterior correlation. The Gaussian mean-field optimum removes
 this dependence and can severely underestimate marginal uncertainty.
 
-Author: generated for thesis experiment workflow
+Author: generated for project experiment workflow
 """
 
 from __future__ import annotations
@@ -170,7 +170,7 @@ def autocorrelation_1d(x: np.ndarray, max_lag: int) -> np.ndarray:
 def ess_from_acf(acf: np.ndarray, n_samples: int) -> float:
     """ESS estimate truncating at the first non-positive autocorrelation.
 
-    This preserves the estimator used for the thesis tables; it is not the
+    This preserves the estimator used for the original project tables; it is not the
     paired-autocovariance IPS estimator introduced by Geyer.
     """
     positive_sum = 0.0
@@ -287,7 +287,7 @@ def summarize_one_case(
 
 
 def make_summary_tables(results: pd.DataFrame, output_dir: Path) -> None:
-    """Write compact CSV tables for thesis drafting."""
+    """Write compact CSV tables for project reporting."""
     results.to_csv(output_dir / "experiment2_full_results.csv", index=False)
 
     geometry_cols = [
@@ -417,7 +417,7 @@ def plot_contours_for_selected_tau(
 
     # Layout: 2x2 grid when there are exactly four collinearity levels, otherwise
     # fall back to a single row. The 2x2 grid gives each panel roughly six
-    # centimetres at \includegraphics[width=\textwidth] in the thesis, which is
+    # centimetres at \includegraphics[width=\textwidth] in the project report, which is
     # what makes the contour comparison legible.
     n_panels = len(cfg.rho_grid)
     if n_panels == 4:
