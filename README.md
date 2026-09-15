@@ -58,7 +58,7 @@ same weakly identified direction slows ULA.
 ## Reproduce the results
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/posterior-geometry.git
+git clone https://github.com/katiarusso/posterior-geometry.git
 cd posterior-geometry
 python -m venv .venv
 source .venv/bin/activate
