@@ -77,7 +77,6 @@ written to `results/experiment_1/` and `results/experiment_2/`.
 experiments/   Self-contained experiment scripts
 results/       Reproducible figures and numerical tables
 tests/         Checks for the closed-form identities used in the analysis
-paper/         Full thesis PDF
 ```
 
 ## Scope
@@ -90,7 +89,7 @@ flows, MALA, HMC and preconditioned Langevin dynamics change the trade-offs.
 
 ## Technical note on ESS
 
-The analytical quantities reproduce the thesis exactly. Monte Carlo tables are
+The analytical quantities reproduce the analytical results exactly. Monte Carlo tables are
 regenerated deterministically using independent documented sub-seeds, so the
 repository remains reproducible even when a single parameter setting is run in
 isolation. Their values may differ slightly from earlier notebook executions
@@ -102,10 +101,10 @@ paired-autocovariance IPS estimator.
 
 ## Citation
 
-If this repository supports your work, please cite the accompanying thesis using
+If this repository supports your work, please cite the accompanying exploratory report using
 the metadata in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
-Code is released under the MIT License. The thesis PDF remains the author's
+Code is released under the MIT License. The project report remains the author's
 scholarly work and is included for reading and reproducibility.
