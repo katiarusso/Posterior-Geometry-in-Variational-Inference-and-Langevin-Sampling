@@ -1,1 +1,1 @@
-"""Reproducible experiments accompanying the posterior-geometry thesis."""
+"""Reproducible experiments for an exploratory study of posterior geometry."""
